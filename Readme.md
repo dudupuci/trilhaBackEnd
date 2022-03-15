@@ -86,3 +86,15 @@ f) 5 Vantages da POO:
     - O que ele faz é simplesmente simplificar o desenvolvimento de API's.
 
     k) <strong>O Postman</strong> bem parecido com o Swagger, é também um aplicativo que serve para testar API's. Serve de suporte à documentação de requisições de uma API. Facilita também aos Devs criar, documentar, compartilhar e testar as API's.
+
+    <strong>------ DESAFIO 4 --------</strong>
+
+    a) (I) JDBC Significa Java Database Connectivity. É uma API chamada de baixo nível ou nível de chamada, usada para a <strong>interação do banco de dados SQL</strong>. Conjunto de classes e interfaces desenvolvidas em Java que fazem o envio de dados em SQL.
+
+    (II) Object Relational Mapping, ou Mapeamento Objeto-Relacional (ORM), <strong>é uma técnica utilizada para aproximar/unir o paradigma da orientação a objetos ao paradigma do banco de dados relacional, já que essas duas estruturas são diferentes.</strong> O ORM ajuda a mapear os dados do tipo de linguagem de programação e do banco de dados. Em outras palavras, ORM serve básicamente para fazer essa "modelagem" dos dados, os organizando por exemplo em uma tabela.
+
+    (III) JPA ou Java Persistence API, não é apenas um framework para ORM. Ela é muito utilizada para persistir objetos Java. Devem ser implementados para prover persistência de dados em bancos relacionais. Tem como base a JDBC. Ajuda a simplificar o dia a dia do programador.
+
+    (IV) Spring Data é o modelo de desenvolvimento dentro do Spring Framework, para acesso e também manipulação de dados. Muito utilizado para facilitar a configuração e o uso com seu banco de dados relacional ou não-relacional e auxiliar o desenvolvedor na hora de trabalhar. Existe dentro dele uma configuração padrão, que com apenas alguns clicks e seleções ele já entende o que fazer. É um poderoso framework que nasceu para facilitar a criação dos repositórios.
+
+    d) CRUD significa: Create, Read, Update e Delete, que são operações básicas de uma aplicação a um banco de dados, em outras palavras, operações como Criar, Ler, Atualizar e Excluir/Apagar. Um projeto CRUD básico é aquele que realiza apenas essas operações mais básicas, sem a necessidade do uso de outros recursos do banco de dados.
