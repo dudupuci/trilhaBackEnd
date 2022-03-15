@@ -2,8 +2,18 @@ package entities;
 
 import java.util.ArrayList;
 
-public class Entry extends Category {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+//This is a entity.
 
+@Entity
+public class Entry extends Category {
+	// Primary key of this entity.
+	@Id
+	// Auto-increment, the database generates the value
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String type;
 	private String amount;
 	private String date;
@@ -67,7 +77,6 @@ public class Entry extends Category {
 	public void setCategoryId(Integer categoryId) {
 		this.categoryId = categoryId;
 	}
-
 
 	@Override
 	public String toString() {

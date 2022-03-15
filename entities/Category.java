@@ -2,8 +2,18 @@ package entities;
 
 import java.util.ArrayList;
 
-public class Category {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 
+// This is a entity.
+@Entity
+public class Category {
+	// Primary key of this entity.
+	@Id
+	// Auto-increment, the database generates the value
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	protected Integer id;
 	protected String name;
 	protected String description;
@@ -50,12 +60,12 @@ public class Category {
 	}
 
 	public ArrayList<Category> findById(long id) {
-	
+
 		return null;
 	}
 
 	public ArrayList<Category> findAll() {
-	
+
 		return null;
 	}
 

@@ -2,6 +2,13 @@ package trilhabackend;
 
 import java.util.ArrayList;
 
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+
+import ch.qos.logback.core.net.SyslogOutputStream;
+
+import org.apache.tomcat.util.http.fileupload.disk.DiskFileItemFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 //import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
@@ -12,6 +19,9 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 
+import com.mysql.jdbc.MysqlIO;
+import com.mysql.jdbc.log.Log;
+
 import entities.Category;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
@@ -21,6 +31,8 @@ import io.swagger.annotations.ApiOperation;
 @Api(value = "API Financys")
 @CrossOrigin(origins = "*")
 public class IndexControllerCategory {
+	
+
 
 	@Autowired
 	Category newCategory;
@@ -36,7 +48,6 @@ public class IndexControllerCategory {
 		listCategory.add(categoryFinancys);
 		listCategory.add(categoryEmployee);
 		return listCategory.indexOf(newCategory);
-
 	}
 
 	@ApiOperation(value = "Metodo GET Categorias")
@@ -52,6 +63,48 @@ public class IndexControllerCategory {
 
 	}
 
+	private final String CNT_LOG = "DBAcess";
+	private ArrayList<Category> createCategory;
+	private MysqlIO db;
+
+	public void Create(MysqlIO db) {
+		// @PostMapping("/categorias")
+
+	}
+
+	public void Read(MysqlIO db) {
+        //@GetMapping("/categorias")
+		
+	}
+
+	public long Update(MysqlIO db, int version) {
+		//@PutMapping("/categorias/{id}")
+		return version;
+
+	}
+
+	public String Delete(String table, String local) {
+		//@DeleteMapping("/categorias/{id}")
+		int excluded = 0;
+		if (table.contains(local)) {
+			table(excluded);
+		} else {
+			return null;
+		}
+		return "Has been excluded: " + excluded;
+
+	}
+
+	private void table(int excluded) {
+		// TODO Auto-generated method stub
+
+	}
+ 
+	
+	
+	
 	// Can i create the two objects of the type "Category" here?.
+	
+	
 
 }
